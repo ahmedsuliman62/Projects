@@ -11,6 +11,15 @@ public class SimpleWordProblem {
         return false;
     }
 
+    public static String checkAnswer(int sum, int answer) {
+
+        if (compare(answer, sum)) {
+            return "That's the correct answer good job!";
+        }
+        else {
+            return"Sorry, that's not the correct answer please try again!";
+        }
+    }
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -23,12 +32,7 @@ public class SimpleWordProblem {
                 + rand2 + " donuts, how many donuts does little Timmy have?");
 
         int ans = scan.nextInt();
+        checkAnswer(ans, sum);
 
-        if (compare(ans, sum)) {
-            System.out.println("That's the correct answer good job!");
-        }
-        else {
-            System.out.println("Sorry, that's not the correct answer please try again!");
-        }
     }
 }
